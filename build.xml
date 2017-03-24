@@ -1,0 +1,12 @@
+<project name ="android" default ="compile">
+<property name ="path" value ="C:\Users\srinivas\.jenkins\jobs\ant\workspace"/>
+<echo>simple java file</echo>
+<target name ="compile" depends ="create">
+<javac includeantruntime="false" srcdir="${path}/src" destdir="${path}/src/.classes"/>
+  <copy file="E:\TOOLS\war files\Calendar.war" todir="${path}"/>
+</target>
+<target name ="create">
+<mkdir dir ="${path}/src/.classes"/>
+<echo>directory created</echo>
+</target>
+</project>
